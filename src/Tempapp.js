@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import "./css/style.css";
+
+
 const  Tempapp=()=> {
   const [city,setCity]=useState(null);
   const [search,setSearch]=useState("noida");
-  //4e52d6671310766e05fb746d597725d7
-  //const url='https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={4e52d6671310766e05fb746d597725d7}';
-   useEffect(()=>{
-    const apicall=async()=>{
-    const url=`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=4e52d6671310766e05fb746d597725d7`;
-         const data= await fetch(url);
-        const rejson= await data.json();
-          setCity(rejson.main);
-         console.log(rejson);
-   }
-            apicall();
-},[search]);
+
+  useEffect(()=>{
+    async function apicall(){
+      const url=`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${process.env.REACT_APP_SECRET_KEY}`;
+        const data= await fetch(url);
+            const rejson= await data.json();
+              setCity(rejson.main);
+             //console.log(rejson);
+       }
+    apicall();
+},[search])
+  
+
+  
+
+   
        
   return (
             
