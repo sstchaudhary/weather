@@ -1,104 +1,89 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Roboto&display=swap');
 
 
 *{
-    box-sizing: border-box;
     padding:0;
     margin: 0;
-    background-color: #f5fafc;
-    font-family: 'Roboto', sans-serif;
-  }
- 
-    .box{
-        background-color: rgb(173, 234, 241);
-        width:100vh;
-        height:60vh;
-        border-radius: 12px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-      }
- 
-      .inputdata{
-         width:100%;
-        position:absolute ;
-        background-color: rgb(173, 234, 241); 
-        top: 40px;
-        
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
     
-         }
-      
-    .inputfield{
-          border: 1px solid gray;
-          height:25px;
-          width:75%;
-          padding: 2px 10px 2px 10px;
-          outline:0;
-          background-color: #f5f5f5;
-          margin-left:100px;
-          font-family: 'Roboto', sans-serif;
-          font-size: medium ;
-        
-         
-    }
-    .inputfield:hover,.inputfield:focus{
-        border: 2 px solid #009688;
-        background-color: white;
-        height:26px;
-       
-    }
-    
-    .location{
-     width:50vh;
-     position:absolute ;
-     background-color: rgb(173, 234, 241); 
-     top:70px;
-     left:160px ;
-     margin-top: 20px;
+  }
+ .main_div{
+  width:100vw;
+  height:100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(216,100%,94%);
+ }
+.center_div{
+  width:350px;
+  height:200px;
+  border-radius: 16px;
+  background:linear-gradient(to right top,#7cc0f1,#7469e7);
+  padding: 30px;
+  box-shadow: 
+      0 2.8px 2.2px rgba(0,0,0,0.034),
+      0 6.7px 5.3px rgba(0,0,0,0.048),
+      0 12.5px 10px rgba(0,0,0,0.06),
+      0 22.3px 17.9px rgba(0,0,0,0.072),
+      0 41.8px 33.4px rgba(0,0,0,0.086),
+      0 100px 80px rgba(0,0,0,0.12);
+
+}
+.search{
+  display: grid;
+  border-radius: 16px;;
+  place-items: center;
+ }
+.inputfield{
+    width:300px;
+    height:25px;
+     color:black;
+      border-radius: 16px;
+     font-family: 'Maven Pro', sans-serif;
+     font-size:small;
+     text-transform: uppercase;
+     padding:5px;
+     border-style: none;
+}
+
+ .top_div{
+   display: grid;
+   place-items:center;
+   margin-top:15px;
+   background: linear-gradient(to right top,#ec75be,#9248e7);
+   border-radius:12px;
+   box-shadow: 
+      0 2.8px 2.2px rgba(0,0,0,0.034),
+      0 6.7px 5.3px rgba(0,0,0,0.048),
+      0 12.5px 10px rgba(0,0,0,0.06),
+      0 22.3px 17.9px rgba(0,0,0,0.072),
+      0 41.8px 33.4px rgba(0,0,0,0.086),
+      0 100px 80px rgba(0,0,0,0.12);
+
+  
+ }
+h1{
+      text-transform: uppercase;
+      padding:5px;
+  }
+ i{
+   padding:5px;
+   color: darkred;
+   animation-name: spin;
+   animation-duration:3000ms;
+  animation-iteration-count:initial;
+  animation-timing-function: linear; 
+ }
  
-      }
-
-    .location h2{
-       text-align: center;
-       font-family: 'Roboto', sans-serif;
-       color: red;
-       
-
-    }
-  i{
-     width:50px;
-     color: black;
-     margin-inline: 5px;
-  }
-  .tempposition{
-
-    width:42vh;
-    position: absolute;
-     background-color: rgb(173, 234, 241); 
-     top:150px;
-     left:190px ;
-     margin-top: 20px;
-  }
-  .tempposition h2{
-    font-family: 'Roboto', sans-serif;
-     text-align: center;
-     font-size: medium;
-     font-style:normal;
-  }
-
-  .tempposition h3{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: small;
-   
-  }
-
-  p{
-     margin-top:100px;
-     background-color: rgb(173, 234, 241); 
-     text-align: center;
-     font-family: 'Roboto', sans-serif;
-  }
+ @keyframes spin {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg);
+}
+ }
+h3{
+   font-weight:20px;
+   font-size:15px;
+   margin-top:15px;
+   margin-bottom:5px;
+}
